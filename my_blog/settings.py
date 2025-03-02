@@ -121,11 +121,16 @@ USE_TZ = True
 REST_FRAMEWORK = {
     # YOUR SETTINGS
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
+    #Token
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
 }
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'API para un proyecto blog',
-    'DESCRIPTION': 'Esta es un APIrest para un proyecto blog de programacion',
+    'DESCRIPTION': 'Esta es un APIrest para un proyecto blog de programación.',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
